@@ -17,16 +17,39 @@ import "fmt"
 // %f	float
 // %t	boolean
 
+// func main() {
+//     var age int = 25
+//     var name string = "Subhransu"
+//     var pi float64 = 3.14
+
+// 	var a, b, c int = 1, 2, 3
+//     x, y := 10, "Hello"
+
+//     fmt.Println(age, name, pi)
+//     fmt.Println(a, b, c)
+//     fmt.Println(x, y)
+
+// }
+
+
 func main() {
-    var age int = 25
-    var name string = "Subhransu"
-    var pi float64 = 3.14
+    score := 85
 
-	var a, b, c int = 1, 2, 3
-    x, y := 10, "Hello"
+    if score >= 90 {
+        fmt.Println("A grade")
+    } else if score >= 80 {
+        fmt.Println("B grade")
+    } else {
+        fmt.Println("Below B")
+    }
 
-    fmt.Println(age, name, pi)
-    fmt.Println(a, b, c)
-    fmt.Println(x, y)
-
+    // Go's unique: if with initialization statement
+    // The variable `result` only exists inside this if block
+    if result := score * 2; result > 150 {
+        fmt.Println("High score:", result)
+    } else {
+        fmt.Println("Normal score:", result)
+    }
+    // result is NOT accessible here — great for scoping
 }
+
